@@ -83,24 +83,3 @@ esac
 
 echo ""
 exec "${CMD[@]}"
-
-
-
-
-
-#####################################################
-
-
-# # Start Apache Spark
-# echo "[ENTRYPOINT] Starting Apache Spark.."
-# /opt/bitnami/scripts/spark/run.sh
-
-# # Check if Spark is running by searching for its process. Adjust the grep pattern as needed.
-# if ps -aux | grep -q '[s]park'; then
-#     echo "Apache Spark is running."
-# else
-#     echo "Apache Spark is not running. Please check your configuration."
-# fi
-
-# # Keep the container running (if needed)
-# tail -f /dev/null
