@@ -1,4 +1,4 @@
-# combined_app.py
+# SparkCheck.py
 from pyspark.sql import SparkSession
 
 def check_spark_version(spark_session):
@@ -18,14 +18,14 @@ def simple_app(spark_session, logFile):
 
 if __name__ == "__main__":
     # Initialize SparkSession
-    spark = SparkSession.builder.appName("CombinedApp").getOrCreate()
+    spark = SparkSession.builder.appName("SparkCheckApp").getOrCreate()
     
     # Check Spark version and perform a simple operation to ensure it's running properly
     check_spark_version(spark)
     perform_simple_operation(spark)
     
     # Path to a text file to analyze (update with a real path on your system or environment)
-    logFile = "YOUR_SPARK_HOME/README.md"
+    logFile = "/app/README.md"
     
     # Run simple text analysis app
     simple_app(spark, logFile)
