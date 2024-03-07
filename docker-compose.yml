@@ -13,7 +13,7 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
     ports:
-      - "8080:8080" # Spark UI port mapping
+      - "8080:8080" # Spark Master UI port mapping
     volumes:
       - ./:/app # Optional: Volume mapping
   
@@ -29,3 +29,5 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
+    ports:
+      - "8081:8081" # Spark Worker UI port mapping
