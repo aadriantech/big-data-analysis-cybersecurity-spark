@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     ncurses-bin && rm -rf /var/lib/apt/lists/*;
 
 # Install Python Libraries
-RUN pip install plotly pandas pyspark matplotlib numpy seaborn scikit-learn
+RUN pip install plotly pandas pyspark matplotlib numpy seaborn scikit-learn openpyxl
 
 # Copy the entrypoint script into the container at the root directory
 COPY ./docker/entrypoint.sh /entrypoint.sh
